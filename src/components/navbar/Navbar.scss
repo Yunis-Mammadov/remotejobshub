@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parentNavbar {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Links */
+.parentLinks {
+    // background-color: yellow;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.parentLinks ul {
+    display: flex;
+    gap: 20px;
+}
+
+.parentLinks ul li {
+    list-style: none;
+}
+
+.parentLinks a {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+/* Buttons */
+.registerBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.textBtn {
+    padding: 8px 15px !important;
+    font-size: 0.875rem !important;
+    text-transform: none !important;
+}
+
+.buttons {
+    padding: 6px 10px !important;
+    font-size: 0.8rem !important;
+    border-radius: 10px !important;
+    text-transform: none !important;
+}
+
+/* Hamburger Menu */
+.menuButton {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .parentLinks {
+        display: none;
+    }
+
+    .menuButton {
+        display: block;
+    }
+
+    .mobileMenu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        padding: 10px 0;
+        z-index: 999;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 90%;
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        li {
+            // background-color: red;
+            padding: 10px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .buttons, .textBtn {
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+
+}
