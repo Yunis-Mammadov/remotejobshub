@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { IconButton, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from "@mui/icons-material/Close";
-import './Navbar.scss';
+import '../../styles/Navbar.scss';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

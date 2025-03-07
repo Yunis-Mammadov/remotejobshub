@@ -6,10 +6,12 @@
 
 .parentNavbar {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    background-color: white;
 }
 
 .navbar {
@@ -23,35 +25,34 @@
     font-family: "Fira Sans", sans-serif;
     font-weight: 500;
     font-size: 30px;
-}
 
-.logo a {
-    text-decoration: none;
-    color: black;
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }
 
 /* Links */
 .parentLinks {
-    // background-color: yellow;
     width: 60%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-}
 
-.parentLinks ul {
-    display: flex;
-    gap: 20px;
-}
+    ul {
+        display: flex;
+        gap: 20px;
 
-.parentLinks ul li {
-    list-style: none;
-}
+        li {
+            list-style: none;
 
-.parentLinks a {
-    text-decoration: none;
-    color: black;
-    font-size: 17px;
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 17px;
+            }
+        }
+    }
 }
 
 /* Buttons */
@@ -60,19 +61,19 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-}
 
-.textBtn {
-    padding: 8px 15px !important;
-    font-size: 0.875rem !important;
-    text-transform: none !important;
-}
+    .textBtn {
+        padding: 8px 15px !important;
+        font-size: 0.875rem !important;
+        text-transform: none !important;
+    }
 
-.buttons {
-    padding: 6px 10px !important;
-    font-size: 0.8rem !important;
-    border-radius: 10px !important;
-    text-transform: none !important;
+    .buttons {
+        padding: 6px 10px !important;
+        font-size: 0.8rem !important;
+        border-radius: 10px !important;
+        text-transform: none !important;
+    }
 }
 
 /* Hamburger Menu */
@@ -105,26 +106,24 @@
             align-items: flex-start;
             width: 90%;
             list-style-type: none;
-            padding: 0;
             margin: 0 auto;
-            text-align: center;
-        }
-        
-        li {
-            // background-color: red;
-            padding: 10px 0;
+            padding: 0;
+
+            li {
+                padding: 10px 0;
+
+                a {
+                    text-decoration: none;
+                    color: #333;
+                    font-size: 16px;
+                }
+            }
         }
 
-        a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-        }
-
-        .buttons, .textBtn {
+        .textBtn,
+        .buttons {
             margin-top: 10px;
             width: 100%;
         }
     }
-
 }

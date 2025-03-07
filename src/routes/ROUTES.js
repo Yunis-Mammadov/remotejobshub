@@ -1,6 +1,6 @@
-import About from "../pages/about"
-import Home from "../pages/home"
-import Jobs from "../pages/jobs"
+import About from "../pages/About"
+import Home from "../pages/Home"
+import Jobs from "../pages/Jobs"
 import MainRoot from "../pages/MainRoot"
 
 export const ROUTES = [
