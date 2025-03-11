@@ -1,0 +1,24 @@
+.parentSections {
+    width: 100%;
+
+    .sections {
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        flex-direction: column;
+        width: 70%;
+        margin: 40px auto;
+    }
+
+    @media (max-width: 900px) {
+        .sections{
+            width: 90%;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .sections{
+            width: 100%;
+        }
+    }
+}

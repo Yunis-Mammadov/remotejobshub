@@ -16,15 +16,17 @@ const brands = [
 
 const InfiniteSlider = () => {
   return (
-    <div className="slider-container">
-      <div className="slider">
-        {[...brands, ...brands].map((brand, index) => (
-          <div className="slide" key={index}>
-            <img src={brand.logo} alt={brand.name} />
-          </div>
-        ))}
+    <>
+      <div className="slider-container">
+        <div className="slider">
+          {[...brands, ...brands].map((brand, index) => (
+            <div className="slide" key={index}>
+              <img src={brand.logo} alt={brand.name} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
