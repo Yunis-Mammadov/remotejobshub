@@ -12,7 +12,7 @@ const PopularJobs = () => {
                     <button>See All Jobs</button>
                 </Link>
             </div>
-             <Card type={"popularJobs"} />
+             <Card type="popularJobs" />
         </div>
     );
 };

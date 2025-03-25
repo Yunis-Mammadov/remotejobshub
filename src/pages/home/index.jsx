@@ -55,9 +55,10 @@ import React from 'react'
 import HeroSection from './HeroSection'
 import CarouselApp from './CarouselApp'
 import NewJobs from './NewJobs'
-import '../../styles/Home.scss'
 import PopularJobs from './PopularJobs'
 import TopPay from './TopPay'
+import InfoSection from './InfoSection'
+import '../../styles/Home.scss'
 
 const Home = () => {
   return (
@@ -69,8 +70,7 @@ const Home = () => {
           <NewJobs />
           <PopularJobs />
           <TopPay />
-          {/* <NewJobs />
-          <NewJobs /> */}
+          <InfoSection />
         </div>
       </div>
     </div>

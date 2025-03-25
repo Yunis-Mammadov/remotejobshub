@@ -1,6 +1,6 @@
 .homeJobs {
     width: 100%;
-    margin-top: 80px;
+    margin-top: 60px;
     padding: 10px;
     // background-color: red;
 
@@ -9,10 +9,18 @@
         justify-content: space-between;
         align-items: center;
         transition: 300ms ease-in-out;
-        // background-color: beige;
+
+        button {
+            background-color: transparent;
+            padding: 5px 10px;
+            border: none;
+            color: rgb(25,118,210);
+            font-size: 15px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
     }
 
-    .homeJobsBtn button:hover{
-        cursor: pointer;
-    }
 }

@@ -1,81 +1,58 @@
-import React, { useEffect, useState } from "react";
-import StarBorderIcon from "@mui/icons-material/StarBorder";
-import HomeIcon from "@mui/icons-material/Home";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import { getAllJobs } from "../../../api/request";
-import "../../../styles/Card.scss";
+import React from 'react';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import StarOutlineIcon from '@mui/icons-material/StarOutline';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import '../../../styles/Card.scss';
+import { Link } from 'react-router-dom';
 
-const Card = ({ type }) => {
-    const [jobs, setJobs] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        getAllJobs()
-            .then(data => {
-                setJobs(data);
-                setLoading(false);
-            })
-            .catch(error => console.error(error));
-    }, []);
-
-    if (loading) {
-        return <p>Loading jobs...</p>;
-    }
-
-    // Şərtlərə uyğun olaraq ilk 3 işi seç
-    let filteredJobs = [];
-
-    if (type === "newJobs") {
-        filteredJobs = jobs.filter(job => job.is_remote_work === 1).slice(0, 3);
-    } else if (type === "popularJobs") {
-        filteredJobs = [...jobs]
-            .sort((a, b) => (b.number_of_opening || 0) - (a.number_of_opening || 0))
-            .slice(0, 3);
-    } else if (type === "topPay") {
-        filteredJobs = [...jobs]
-            .sort((a, b) => (b.salary_to || 0) - (a.salary_to || 0))
-            .slice(0, 3);
-    }
-
+const Card = () => {
     return (
-        <div>
-            {filteredJobs.map((job) => (
-                <div className={`newJobsCard ${type}`} key={job.id}>
-                    <div className="newJobsTitle">
-                        <p>{job.updated_at || "N/A"}</p>
-                        <StarBorderIcon sx={{color:"gold"}} />
+        <>
+            <div className='cardParent'>
+                <div className='cardTitle'>
+                    <div>
+                        <p>1 hours ago</p>
+                        <p>experience</p>
+                        <p>remote-europe</p>
                     </div>
-                    <div className="cardDetail">
-                        <div className="jobsName">
-                            <img
-                                src={job.companyLogo || "https://via.placeholder.com/150"}
-                                alt={job.title}
-                            />
-                            <div>
-                                <h3>{job.title}</h3>
-                                <p className="subText">{job.company}</p>
-                            </div>
-                        </div>
-                        <div className="jobsCondition">
-                            <p>
-                                <b>{job.salary_from}$ - {job.salary_to}$</b>/yearly
-                            </p>
-                            <div className="conditionIcons">
-                                <div>
-                                    <HomeIcon className="homeIcons" />
-                                    <p className="subText">{job.is_remote_work === 1 ? "Remote" : "On-site"}</p>
-                                </div>
-                                <div>
-                                    <LocationOnIcon className="homeIcons" />
-                                    <p className="subText">{job.location}</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div>
+                        <StarOutlineIcon />
                     </div>
                 </div>
-            ))}
-        </div>
+                <Link to={'/jobs'} className="cardLink">
+                    <div className='cardDetail'>
+                        <div className='cardImageContainer'>
+                            <div className='cardImage'>
+                                <img src="https://remote.com/jobs/_next/image?url=%2Fjobs%2F_next%2Fstatic%2Fmedia%2Fcompany-placeholder-3.1ea2c135.png&w=128&q=75" alt="" />
+                            </div>
+                            <div className='text' style={{
+                                display: "flex",
+                                justifyContent: "space-evenly",
+                                flexDirection: "column",
+                                color: "black"
+                            }}>
+                                <h3>Project Manager</h3>
+                                <h4>Wildix OU</h4>
+                            </div>
+                        </div>
+                        <div className='cardDataContainer'>
+                            <div>
+                                <div>
+                                    <LocationOnIcon sx={{ fontSize: "22px", color: "gray" }} />
+                                    <p>Europe only</p>
+                                </div>
+                                <div>
+                                    <AccessTimeIcon sx={{ fontSize: "22px", color: "gray" }} />
+                                    <p>Full-Time</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Link>
+            </div>
+        </>
+
     );
-};
+}
 
 export default Card;
