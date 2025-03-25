@@ -58,6 +58,7 @@ import NewJobs from './NewJobs'
 import PopularJobs from './PopularJobs'
 import TopPay from './TopPay'
 import InfoSection from './InfoSection'
+import AiInterview from './AiInterview'
 import '../../styles/Home.scss'
 
 const Home = () => {
@@ -71,6 +72,7 @@ const Home = () => {
           <PopularJobs />
           <TopPay />
           <InfoSection />
+          <AiInterview />
         </div>
       </div>
     </div>

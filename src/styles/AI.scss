@@ -1,0 +1,178 @@
+.ai-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 30px auto;
+
+  .ai-content {
+    max-width: 50%;
+
+    .powered {
+      font-size: 0.9rem;
+      color: gray;
+
+      .brand {
+        font-weight: bold;
+        color: blue;
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    ul {
+      margin: 1rem 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .get-started {
+      font-size: 1rem;
+      margin-top: 1rem;
+      color: #777;
+    }
+
+    .buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+
+      .create-profile {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .browse-jobs {
+        background-color: white;
+        color: blue;
+        border: 1px solid blue;
+        padding: 0.8rem 1.5rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .ai-image {
+    max-width: 50%;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/* 📌 Responsive Media Query'lər */
+
+/* 🟢 Tablet Ekranlar (max 1024px) */
+@media (max-width: 1024px) {
+  .ai-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ai-content {
+    max-width: 80%;
+    margin-bottom: 2rem;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .ai-image {
+    max-width: 70%;
+  }
+}
+
+/* 🔵 Mobil Ekranlar (max 768px) */
+@media (max-width: 768px) {
+  .ai-content {
+    max-width: 100%;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .description {
+      font-size: 0.9rem;
+    }
+
+    ul {
+      li {
+        font-size: 0.9rem;
+      }
+    }
+
+    .buttons {
+      flex-direction: column;
+      align-items: center;
+      
+      .create-profile, .browse-jobs {
+        width: 100%;
+        padding: 0.8rem;
+      }
+    }
+  }
+
+  .ai-image {
+    max-width: 90%;
+  }
+}
+
+/* 🔴 Kiçik Mobil Ekranlar (max 480px) */
+@media (max-width: 480px) {
+  .ai-container {
+    padding: 1.5rem;
+  }
+
+  .ai-content {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .description {
+      font-size: 0.85rem;
+    }
+
+    ul {
+      li {
+        font-size: 0.85rem;
+      }
+    }
+
+    .buttons {
+      .create-profile, .browse-jobs {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+      }
+    }
+  }
+
+  .ai-image {
+    max-width: 100%;
+  }
+}
